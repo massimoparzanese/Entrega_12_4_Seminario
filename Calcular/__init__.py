@@ -1,8 +1,8 @@
 def Crear_estructura_jugadores(nombre,goles,evitados,asis,lista_jugadores):
-    """Esta funcion la utilizo en el inciso 1, en esta lo que hago es recibir cada dato de 
-    un jugador(nombre,goles,goles evitados y asistencias), 
-    con ello hago un diccionario donde cada clave es 
-    lo que representa y lo retorno para agregarlo en la estructura de datos. Esto podría hacer mas cosas, pero se me ocurrio hacerlo así"""
+    """Esta funcion la utilizo en el inciso 1, en esta lo que hago es recibir las listas
+    con los datos de todos los jugadores junto con la lista donde voy a guardar en este caso
+    diccionarios, donde cada diccionario tiene 4 claves, todas autoexplicativas de lo que 
+    guardan dentro:Nombre,goles,goles evitados y asistencias. Cada diccionario representa un único jugador."""
     jugador={}
     for i in range(len(nombre)):
       jugador["nombre"]=nombre[i]
@@ -77,8 +77,9 @@ def promedio_goles_equipo(partidos_temporada,lista_jugadores):
     return tot
 
 def promedio_del_goleador(lista_jugadores,partidos_temporada):
-    """Esta funcion la utilizo para el sub-inciso 5, recibiendo como parametro el jugador/a que fue goleador/a y la tupla con los 
-    artidos jugados en la temporada, obtengo en la variable goles la cant de goles del jugador/a, lo convierto a flotante junto con los partidos
-    para poder obtener un resultado exacto, y luego retorno"""
+    """Esta funcion la utilizo para el sub-inciso 5, recibiendo como parametro la lista de jugadores y los partidos 
+    que jugo el equipo en toda la temporada. En esta funcion llamo a la funcion que me devuelve el goleador del equipo
+    y luego retorno su promedio goleador dividiendo la cantidad de goles por los partidos jugados"""
     goleador =  obtener_goleador(lista_jugadores)
-    return goleador["goles"] / partidos_temporada
+    goles = float(goleador["goles"])
+    return goles / partidos_temporada

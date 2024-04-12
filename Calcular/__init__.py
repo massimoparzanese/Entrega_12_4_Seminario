@@ -11,11 +11,7 @@ def Crear_estructura_jugadores(nombre,goles,evitados,asis,lista_jugadores):
       jugador["asistencias"]=asis[i]
       lista_jugadores.append(jugador)
       jugador={} 
-    #jugador={}
-    #jugador["nombre"]=nombre
-    #jugador["goles"]=goles
-    #jugador["goles evitados"]=evitados
-    #jugador["asistencias"]=asis
+ 
 
 
 def obtener_goleador(lista):
